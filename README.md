@@ -1,4 +1,5 @@
-Lab 9: Decision Trees and Random Forests
+##Lab 9: Decision Trees and Random Forests
+
 Overview
 The goal of this lab is to use LendingClub.com data to predict loan repayment. We implemented two different machine learning models to classify whether a borrower paid their loan in full.
 
