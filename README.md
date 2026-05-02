@@ -1,31 +1,20 @@
-Loan Repayment Prediction
-This repository contains a Machine Learning project to predict whether a borrower will pay back their loan in full using data from LendingClub.com. The project compares the performance of a Single Decision Tree versus a Random Forest Classifier.
+Lab 9: Decision Trees and Random Forests
+Overview
+The goal of this lab is to use LendingClub.com data to predict loan repayment. We implemented two different machine learning models to classify whether a borrower paid their loan in full.
 
-Project Highlights
-Task: Binary Classification (Paid in full vs. Not paid).
+Steps Completed
+Data Exploration: Visualized FICO scores and interest rates using histograms and jointplots.
 
-Dataset: LendingClub loan data (2007-2010).
+Data Transformation: Handled the categorical 'purpose' column by creating dummy variables.
 
-Models Used: Decision Tree, Random Forest (600 estimators).
+Train-Test Split: Divided the dataset into training and testing sets (70/30 split).
 
-Preprocessing: Handled categorical data using Dummy Variables.
+Model Training: Trained a Single Decision Tree and a Random Forest Classifier with 600 estimators.
 
-Exploratory Data Analysis (EDA)
-During the analysis, several visualizations were created to understand the data:
+Results
+Decision Tree: Achieved an accuracy of 74%. It showed a higher recall for the 'not fully paid' class (0.20).
 
-FICO Scores: Histograms showed that borrowers with higher FICO scores are more likely to meet credit policies.
+Random Forest: Achieved a higher overall accuracy of 85%, but had a very low recall for the 'not fully paid' class (0.01).
 
-Interest Rates: A clear trend showed that interest rates decrease as FICO scores increase.
-
-Purpose: Most loans were for "debt consolidation".
-
-Model Comparison & Results
-The models were evaluated using a classification_report and a confusion_matrix. Below is a summary of the performance on the test set (30% of the data):
-
-Metric	Decision Tree	Random Forest
-Overall Accuracy	74%	85%
-Recall (Class 1)	0.20	0.01
-F1-Score (Class 1)	0.18	0.02
-
-💡 Key Conclusion
-While the Random Forest achieved a higher Overall Accuracy (85%), it struggled to identify borrowers who would not pay back (Class 1). The Decision Tree, although less accurate overall, was more effective at detecting high-risk borrowers with a significantly higher Recall.
+Final Conclusion
+The Random Forest model is more accurate overall. However, the Decision Tree is better at catching the high-risk borrowers who do not pay back their loans, as indicated by the higher recall for Class 1.
